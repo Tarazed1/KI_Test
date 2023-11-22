@@ -1,5 +1,11 @@
 #include "register_types.h"
 #include "summator.h"
+#include "Movement/movement.h"
+#include "Movement/steeringforce.h"
+#include "npc.h"
+#include "option.h"
+#include "random.h"
+#include "option_text_out.h"
 #include <gdextension_interface.h>
 #include <godot_cpp/core/class_db.hpp>
 #include <godot_cpp/core/defs.hpp>
@@ -13,6 +19,12 @@ void initialize_summator_types(ModuleInitializationLevel p_level)
 		return;
 	}
 	ClassDB::register_class<Summator>();
+	//ClassDB::register_class<SteeringForce>();
+	//ClassDB::register_class<Movement>();
+	ClassDB::register_class<NPC>();
+	ClassDB::register_class<Random>();
+	ClassDB::register_class<Option>();
+	ClassDB::register_class<OptionTextOut>();
 }
 
 void uninitialize_summator_types(ModuleInitializationLevel p_level) {

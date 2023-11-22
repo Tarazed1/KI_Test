@@ -12,9 +12,18 @@ env = SConscript("godot-cpp/SConstruct")
 # - CPPDEFINES are for pre-processor defines
 # - LINKFLAGS are for linking flags
 
+def add_sources(sources, dir, extension):
+    for f in os.listdir(dir):
+        if f.endswith("." + extension):
+            sources.append(dir + "/" + f)
+
 # tweak this if you want to use different folders, or more folders, to store your source code in.
 env.Append(CPPPATH=["extension/src/"])
+env.Append(CPPPATH=["extension/src/Movement/"])
+env.Append(CPPPATH=["extension/src/Utility/"])
 sources = Glob("extension/src/*.cpp")
+add_sources(sources, "extension/src/Movement", "cpp")
+add_sources(sources, "extension/src/Utility", "cpp")
 
 if env["platform"] == "macos":
     library = env.SharedLibrary(
