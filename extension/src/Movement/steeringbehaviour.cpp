@@ -1,6 +1,7 @@
 #include "steeringbehaviour.h"
 #include <cmath>
 #include "../Utility/macros.h"
+#include <godot_cpp/variant/utility_functions.hpp>
 
 bool SteeringBehaviour::in_fov()
 {
@@ -58,7 +59,8 @@ void SteeringBehaviour::set_standart_force()
 void SteeringBehaviour::update(double time)
 {
     force = get_force();
-    kinematics->velocity += force.movementForce * time;
+    kinematics->velocity += force.movementForce * static_cast<float>(time);
+    UtilityFunctions::print(force.movementForce);
     if (kinematics->velocity.length() > kinematics->maxMovementVelocity) {
         kinematics->velocity = kinematics->velocity.normalized() * kinematics->maxMovementVelocity;
     }

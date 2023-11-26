@@ -23,7 +23,7 @@ SteeringForce Seek::get_force()
 	SteeringForce aSteeringForce;
 	if (!target) return aSteeringForce;
 
-	aSteeringForce.movementForce = this->kinematics->position - target->get_position();
+	aSteeringForce.movementForce = target->get_position() - this->kinematics->position;
 	aSteeringForce.movementForce = aSteeringForce.movementForce.normalized() * this->kinematics->maxMovementForce;
 	aSteeringForce.angularForce = 0;
 

@@ -6,7 +6,7 @@
 #include <godot_cpp/variant/utility_functions.hpp>
 
 NPC::NPC() {
-	position = Vector3(1.0, 1.0, 1.0);
+	position = Vector3(1.0, 0.0, 1.0);
 	localTime = 0.0;
 
 	//Draw Model
@@ -28,7 +28,6 @@ NPC::NPC() {
 	seekBehaviour = new Seek(kinematics);
 	arriveBehaviour = new Arrive(kinematics);
 	steeringBehaviour = fleeBehaviour;
-	steeringBehaviour = new Flee();
 }
 
 NPC::~NPC() {
@@ -38,18 +37,14 @@ NPC::~NPC() {
 void NPC::_ready() {
 	this->add_child(model);
 	this->model->add_child(nose);
-	set_position(position);
+	//set_position(position);
 }
 
 void NPC::_process(double delta) {
 	localTime += 0.1 * delta;
 	steeringBehaviour->update(delta);
-	this->translate(kinematics->position);
-	UtilityFunctions::print(kinematics->position);
-	//set_position(Vector3(localTime, 0.0, 0.0));
+	this->set_position(steeringBehaviour->get_kinematics()->velocity);
 }
-
-
 
 void NPC::set_position(const Vector3 pos) {
 	this->translate(pos);
