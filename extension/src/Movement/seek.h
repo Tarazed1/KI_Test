@@ -9,6 +9,7 @@ private:
 
 protected:
 	KnowledgePosition* target;
+	void set_force() override;
 
 public:
 	Seek();

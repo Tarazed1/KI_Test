@@ -27,7 +27,7 @@ NPC::NPC() {
 	fleeBehaviour = new Flee(kinematics);
 	seekBehaviour = new Seek(kinematics);
 	arriveBehaviour = new Arrive(kinematics);
-	steeringBehaviour = fleeBehaviour;
+	steeringBehaviour = seekBehaviour;
 }
 
 NPC::~NPC() {
@@ -37,24 +37,24 @@ NPC::~NPC() {
 void NPC::_ready() {
 	this->add_child(model);
 	this->model->add_child(nose);
-	//set_position(position);
 }
 
 void NPC::_process(double delta) {
+	if (changeingBehaviour) change_behaviour_intern();
 	localTime += 0.1 * delta;
-	steeringBehaviour->update(delta);
+	steeringBehaviour->update(delta, position);
 	this->set_position(steeringBehaviour->get_kinematics()->velocity);
 }
 
 void NPC::set_position(const Vector3 pos) {
 	this->translate(pos);
-	this->position = pos;
+	this->position = this->get_transform().get_origin();
 	kinematics->position = position;
 }
 
-void NPC::change_behaviour(int index)
+void NPC::change_behaviour_intern()
 {
-	switch (index) {
+	switch (currentBehaviour) {
 	case 1:
 		steeringBehaviour = seekBehaviour;
 		break;
@@ -65,6 +65,13 @@ void NPC::change_behaviour(int index)
 		steeringBehaviour = fleeBehaviour;
 		break;
 	}
+	changeingBehaviour = false;
+}
+
+void NPC::change_behaviour(int index)
+{
+	currentBehaviour = index;
+	changeingBehaviour = true;
 }
 
 Vector3 NPC::get_position() const {

@@ -7,7 +7,7 @@ var numberNPCs = 10;
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	npc.set_target(Vector3(10, 0, 10));
-	npc.set_position(Vector3(10, 0, 10))
+	#npc.set_position(Vector3(10, 0, 10))
 	add_child(npc);
 	pass
 
@@ -20,5 +20,5 @@ func _input(event):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#print(npc.position);
+	print(npc.position);
 	pass;

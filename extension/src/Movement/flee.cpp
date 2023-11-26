@@ -15,16 +15,22 @@ Flee::~Flee() {
 
 }
 
+void Flee::set_force() {
+	if (!target) return;
+
+	force.movementForce = this->kinematics->position - target->get_position();
+	force.movementForce = force.movementForce.normalized() * this->kinematics->maxMovementForce;
+	force.angularForce = 0;
+}
+
 SteeringForce Flee::get_force()
 {
-	UtilityFunctions::print("Getting Force");
 	SteeringForce aSteeringForce;
 	if (!target) return aSteeringForce;
 
 	aSteeringForce.movementForce = this->kinematics->position - target->get_position();
 	aSteeringForce.movementForce = aSteeringForce.movementForce.normalized() * this->kinematics->maxMovementForce;
 	aSteeringForce.angularForce = 0;
-	UtilityFunctions::print(aSteeringForce.movementForce);
 
 	return aSteeringForce;
 }

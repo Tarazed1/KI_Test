@@ -29,10 +29,8 @@ SteeringForce SteeringForce::operator+(SteeringForce& rhs)
 	return SteeringForce();
 }
 
-SteeringForce SteeringForce::operator=(const SteeringForce& rhs)
+void SteeringForce::operator=(const SteeringForce& rhs)
 {
-	SteeringForce aSteeringForce;
-	aSteeringForce.angularForce = rhs.angularForce;
-	aSteeringForce.movementForce = rhs.movementForce;
-	return aSteeringForce;
+	this->movementForce = rhs.movementForce;
+	this->angularForce = rhs.angularForce;
 }

@@ -20,6 +20,7 @@ protected:
 	Kinematics* kinematics;
 	Vector3 standartForce;
 
+	virtual void set_force() abstract;
 	virtual bool in_fov();
 	virtual Vector3 limit();
 	virtual float directionvector_to_angle(Vector3 inVec, bool degrees);
@@ -29,7 +30,7 @@ public:
 	SteeringBehaviour(Kinematics* inKin);
 	~SteeringBehaviour();
 
-	void update(double time);
+	void update(double time, Vector3 pos);
 
 	virtual SteeringForce get_force();
 	virtual void set_standart_force();

@@ -56,15 +56,15 @@ void SteeringBehaviour::set_standart_force()
 {
 }
 
-void SteeringBehaviour::update(double time)
+void SteeringBehaviour::update(double time, Vector3 pos)
 {
+    kinematics->position = pos;
     force = get_force();
-    kinematics->velocity += force.movementForce * static_cast<float>(time);
-    UtilityFunctions::print(force.movementForce);
+    kinematics->velocity = force.movementForce * time * 10.0f;
     if (kinematics->velocity.length() > kinematics->maxMovementVelocity) {
         kinematics->velocity = kinematics->velocity.normalized() * kinematics->maxMovementVelocity;
     }
-    kinematics->position += kinematics->velocity * time;
+    kinematics->position += kinematics->velocity * time * 10.0f;
 }
 
 void SteeringBehaviour::set_facing_mode()

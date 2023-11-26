@@ -26,12 +26,16 @@ class NPC : public Node3D {
 	Mesh* noseMesh;
 	Material* material;
 	double localTime;
+	int currentBehaviour;
+	bool changeingBehaviour = false;
 
 	Kinematics* kinematics;
 	SteeringBehaviour* steeringBehaviour;
 	Flee* fleeBehaviour;
 	Seek* seekBehaviour;
 	Arrive* arriveBehaviour;
+
+	void change_behaviour_intern();
 
 protected:
 	static void _bind_methods();

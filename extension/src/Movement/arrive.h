@@ -10,6 +10,9 @@ private:
 	KnowledgePosition* target;
 	float breakRadius;
 	float breakFactor;
+protected:
+	void set_force() override;
+
 public:
 	Arrive();
 	Arrive(Kinematics* inKin);

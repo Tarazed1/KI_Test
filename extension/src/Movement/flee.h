@@ -8,6 +8,9 @@ class Flee : public SteeringBehaviour {
 private:
 	KnowledgePosition* target;
 
+protected:
+	void set_force() override;
+
 public:
 	Flee();
 	Flee(Kinematics* inKin);

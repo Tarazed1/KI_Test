@@ -22,7 +22,7 @@ using namespace godot;
 		SteeringForce operator+= (const SteeringForce& rhs);
 		SteeringForce operator* (float rhs);
 		SteeringForce operator+ (SteeringForce& rhs);
-		SteeringForce operator= (const SteeringForce& rhs);
+		void operator= (const SteeringForce& rhs);
 	};
 //}
 
