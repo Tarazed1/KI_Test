@@ -7,20 +7,12 @@ Flee::Flee() {
 
 }
 
-Flee::Flee(Kinematics* inKin) : SteeringBehaviour(inKin)
+Flee::Flee(Kinematics& inKin) : SteeringBehaviour(inKin)
 {
 }
 
 Flee::~Flee() {
 
-}
-
-void Flee::set_force() {
-	if (!target) return;
-
-	force.movementForce = this->kinematics->position - target->get_position();
-	force.movementForce = force.movementForce.normalized() * this->kinematics->maxMovementForce;
-	force.angularForce = 0;
 }
 
 SteeringForce Flee::get_force()
@@ -35,7 +27,7 @@ SteeringForce Flee::get_force()
 	return aSteeringForce;
 }
 
-void Flee::SetTarget(KnowledgePosition* inNewTarget)
+void Flee::set_target(KnowledgePosition* inNewTarget)
 {
 	this->target = inNewTarget;
 }

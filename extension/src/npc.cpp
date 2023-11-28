@@ -4,6 +4,7 @@
 #include "Movement/flee.h"
 #include "Movement/knowledgeposition.h"
 #include <godot_cpp/variant/utility_functions.hpp>
+#include "Utility/knowledgekinematicgroup.h"
 
 NPC::NPC() {
 	position = Vector3(1.0, 0.0, 1.0);
@@ -24,10 +25,10 @@ NPC::NPC() {
 
 	kinematics = new Kinematics();
 	kinematics->position = this->position;
-	fleeBehaviour = new Flee(kinematics);
-	seekBehaviour = new Seek(kinematics);
-	arriveBehaviour = new Arrive(kinematics);
-	steeringBehaviour = seekBehaviour;
+	fleeBehaviour = new Flee(*this->kinematics);
+	seekBehaviour = new Seek(*this->kinematics);
+	arriveBehaviour = new Arrive(*this->kinematics);
+	steeringBehaviour = fleeBehaviour;
 }
 
 NPC::~NPC() {
@@ -56,11 +57,25 @@ void NPC::change_behaviour_intern()
 {
 	switch (currentBehaviour) {
 	case 1:
-		steeringBehaviour = seekBehaviour;
-		break;
+		if (seekBehaviour) {
+			steeringBehaviour = seekBehaviour;
+			break;
+		}
+		else currentBehaviour++;
 	case 2:
-		steeringBehaviour = arriveBehaviour;
-		break;
+		if (arriveBehaviour) {
+			steeringBehaviour = arriveBehaviour;
+			break;
+		}
+		else currentBehaviour++;
+	case 3:
+		if (flockingBehaviour) {
+			steeringBehaviour = flockingBehaviour;
+			break;
+		}
+		else {
+			currentBehaviour = 0;
+		}
 	default:
 		steeringBehaviour = fleeBehaviour;
 		break;
@@ -86,10 +101,22 @@ void NPC::set_color(const Color c)
 void NPC::set_target(Vector3 targetPos)
 {
 	KnowledgePosition* kp = new KnowledgePosition("targetName", targetPos);
-	fleeBehaviour->SetTarget(kp);
+	fleeBehaviour->set_target(kp);
 	seekBehaviour->SetTarget(kp);
 	arriveBehaviour->SetTarget(kp);
 }
+
+Kinematics* NPC::get_kinematics() const
+{
+	return kinematics;
+}
+
+void NPC::init_flocking(KnowledgeKinematicGroup& group)
+{
+	flockingBehaviour = new Flocking(*this->kinematics, group);
+}
+
+
 
 void NPC::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_position", "pos"), &NPC::set_position);
@@ -97,4 +124,6 @@ void NPC::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_color", "c"), &NPC::set_color);
 	ClassDB::bind_method(D_METHOD("set_target", "targetPos"), &NPC::set_target);
 	ClassDB::bind_method(D_METHOD("change_behaviour", "index"), &NPC::change_behaviour);
+	ClassDB::bind_method(D_METHOD("get_kinematics"), &NPC::get_kinematics);
+	ClassDB::bind_method(D_METHOD("init_flocking", "group"), &NPC::init_flocking);
 }

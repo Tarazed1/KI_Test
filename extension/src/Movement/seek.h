@@ -9,11 +9,10 @@ private:
 
 protected:
 	KnowledgePosition* target;
-	void set_force() override;
 
 public:
 	Seek();
-	Seek(Kinematics* inKin);
+	Seek(Kinematics& inKin);
 	~Seek();
 
 	void SetTarget(KnowledgePosition* inNewTarget);

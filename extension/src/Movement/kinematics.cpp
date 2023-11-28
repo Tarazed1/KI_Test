@@ -2,6 +2,11 @@
 
 using namespace godot;
 
+void Kinematics::_bind_methods()
+{
+
+}
+
 Kinematics::Kinematics()
 {
 	position = Vector3();

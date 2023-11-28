@@ -7,6 +7,8 @@
 #include "Movement/flee.h"
 #include "Movement/arrive.h"
 #include "Movement/seek.h"
+#include "Utility/knowledgekinematicgroup.h"
+#include "Movement/flocking.h"
 #include <godot_cpp/classes/node3d.hpp>
 #include <godot_cpp/variant/vector3.hpp>
 #include <godot_cpp/classes/geometry_instance3d.hpp>
@@ -34,6 +36,7 @@ class NPC : public Node3D {
 	Flee* fleeBehaviour;
 	Seek* seekBehaviour;
 	Arrive* arriveBehaviour;
+	Flocking* flockingBehaviour;
 
 	void change_behaviour_intern();
 
@@ -50,6 +53,8 @@ public:
 	Vector3 get_position() const;
 	void set_color(const Color c);
 	void set_target(Vector3 targetPos);
+	Kinematics* get_kinematics() const;
+	void init_flocking(KnowledgeKinematicGroup& group);
 };
 
 #endif // !NPC_CLASS

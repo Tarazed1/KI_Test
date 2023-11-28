@@ -19,7 +19,7 @@ using namespace godot;
 		Vector3 movementForce;
 		float angularForce;
 
-		SteeringForce operator+= (const SteeringForce& rhs);
+		void operator+= (const SteeringForce& rhs);
 		SteeringForce operator* (float rhs);
 		SteeringForce operator+ (SteeringForce& rhs);
 		void operator= (const SteeringForce& rhs);

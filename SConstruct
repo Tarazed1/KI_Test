@@ -21,6 +21,8 @@ def add_sources(sources, dir, extension):
 env.Append(CPPPATH=["extension/src/"])
 env.Append(CPPPATH=["extension/src/Movement/"])
 env.Append(CPPPATH=["extension/src/Utility/"])
+#env.Append(LIBPATH=['/out/build/x64-Debug/Framework'])
+#env.Append(LIBS=['Framework'])
 sources = Glob("extension/src/*.cpp")
 add_sources(sources, "extension/src/Movement", "cpp")
 add_sources(sources, "extension/src/Utility", "cpp")

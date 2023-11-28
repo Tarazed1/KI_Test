@@ -6,6 +6,7 @@
 #include "steeringforce.h"
 #include "knowledgeposition.h"
 #include "kinematics.h"
+#include "../Utility/knowledgekinematicgroup.h"
 
 using namespace godot;
 
@@ -19,15 +20,15 @@ protected:
 	SteeringForce force;
 	Kinematics* kinematics;
 	Vector3 standartForce;
+	static void _bind_methods();
 
-	virtual void set_force() abstract;
-	virtual bool in_fov();
+	virtual bool in_fov(Vector3 &viewDir, Vector3 &targetDir, float fov);
 	virtual Vector3 limit();
-	virtual float directionvector_to_angle(Vector3 inVec, bool degrees);
+	virtual float directionvector_to_angle(float currentAngle, Vector3 inVec, bool degrees);
 	virtual Vector3 angle_to_directionvector(float inAngle);
 public:
 	SteeringBehaviour();
-	SteeringBehaviour(Kinematics* inKin);
+	SteeringBehaviour(Kinematics& inKin);
 	~SteeringBehaviour();
 
 	void update(double time, Vector3 pos);

@@ -11,11 +11,10 @@ private:
 	float breakRadius;
 	float breakFactor;
 protected:
-	void set_force() override;
 
 public:
 	Arrive();
-	Arrive(Kinematics* inKin);
+	Arrive(Kinematics& inKin);
 	~Arrive();
 
 	void SetTarget(KnowledgePosition* inNewTarget);

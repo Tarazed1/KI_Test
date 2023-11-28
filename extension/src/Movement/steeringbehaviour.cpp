@@ -3,9 +3,20 @@
 #include "../Utility/macros.h"
 #include <godot_cpp/variant/utility_functions.hpp>
 
-bool SteeringBehaviour::in_fov()
+void SteeringBehaviour::_bind_methods()
 {
-    return false;
+}
+
+bool SteeringBehaviour::in_fov(Vector3& viewDir, Vector3& targetDir, float fov)
+{
+    float relativeAngle = Math::acos((viewDir.dot(targetDir) / (viewDir.length() * targetDir.length())));
+
+    if (relativeAngle < 0.5f * fov) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 Vector3 SteeringBehaviour::limit()
@@ -13,10 +24,11 @@ Vector3 SteeringBehaviour::limit()
     return Vector3();
 }
 
-float SteeringBehaviour::directionvector_to_angle(Vector3 inVec, bool degrees)
+float SteeringBehaviour::directionvector_to_angle(float currentAngle, Vector3 inVec, bool degrees)
 {
+    if (inVec.length() == 0) return currentAngle;
     if (degrees) {
-        return Math::atan2(inVec.z, inVec.x);
+        return Math::atan2(inVec.z, inVec.x); 
     }
     else {
         return Math::atan2(inVec.z, inVec.x) * 180.0f / PI;
@@ -36,11 +48,11 @@ SteeringBehaviour::SteeringBehaviour()
     kinematics = new Kinematics();
 }
 
-SteeringBehaviour::SteeringBehaviour(Kinematics* inKin)
+SteeringBehaviour::SteeringBehaviour(Kinematics& inKin)
 {
     force = SteeringForce();
     standartForce = Vector3();
-    kinematics = inKin;
+    kinematics = &inKin;
 }
 
 SteeringBehaviour::~SteeringBehaviour()

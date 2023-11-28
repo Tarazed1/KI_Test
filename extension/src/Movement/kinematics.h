@@ -6,7 +6,10 @@
 
 using namespace godot;
 
-class Kinematics {
+class Kinematics : public Object {
+	GDCLASS(Kinematics, Object);
+protected:
+	static void _bind_methods();
 public:
 	Kinematics();
 	~Kinematics();
