@@ -19,7 +19,7 @@ public:
 	KnowledgeKinematicGroup();
 	~KnowledgeKinematicGroup();
 
-	Kinematics* get_kinematic(int index); 
+	Kinematics* get_kinematic(int index) const; 
 	int get_size() const;
 	void subscribe(Kinematics* inKin);
 	void unsubscribe(Kinematics* outKin);

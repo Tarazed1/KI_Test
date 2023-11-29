@@ -10,7 +10,7 @@ private:
 
 public:
 	Flee();
-	Flee(Kinematics& inKin);
+	Flee(Kinematics* inKin);
 	~Flee();
 
 	SteeringForce get_force() override;

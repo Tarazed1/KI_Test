@@ -22,9 +22,9 @@ void initialize_summator_types(ModuleInitializationLevel p_level)
 	ClassDB::register_class<Summator>();
 	//ClassDB::register_class<SteeringForce>();
 	//ClassDB::register_class<Movement>();
-	ClassDB::register_class<Kinematics>();
 	ClassDB::register_class<NPC>();
 	ClassDB::register_class<KnowledgeKinematicGroup>();
+	ClassDB::register_class<Kinematics>();
 	ClassDB::register_class<Random>();
 	ClassDB::register_class<Option>();
 	ClassDB::register_class<OptionTextOut>();

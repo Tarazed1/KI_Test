@@ -7,7 +7,7 @@ Seek::Seek()
 {
 }
 
-Seek::Seek(Kinematics& inKin) : SteeringBehaviour(inKin)
+Seek::Seek(Kinematics* inKin) : SteeringBehaviour(inKin)
 {
 }
 

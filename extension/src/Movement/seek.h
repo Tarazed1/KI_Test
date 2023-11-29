@@ -12,7 +12,7 @@ protected:
 
 public:
 	Seek();
-	Seek(Kinematics& inKin);
+	Seek(Kinematics* inKin);
 	~Seek();
 
 	void SetTarget(KnowledgePosition* inNewTarget);

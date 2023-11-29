@@ -25,9 +25,9 @@ NPC::NPC() {
 
 	kinematics = new Kinematics();
 	kinematics->position = this->position;
-	fleeBehaviour = new Flee(*this->kinematics);
-	seekBehaviour = new Seek(*this->kinematics);
-	arriveBehaviour = new Arrive(*this->kinematics);
+	fleeBehaviour = new Flee(this->kinematics);
+	seekBehaviour = new Seek(this->kinematics);
+	arriveBehaviour = new Arrive(this->kinematics);
 	steeringBehaviour = fleeBehaviour;
 }
 
@@ -108,12 +108,12 @@ void NPC::set_target(Vector3 targetPos)
 
 Kinematics* NPC::get_kinematics() const
 {
-	return kinematics;
+	return this->kinematics;
 }
 
-void NPC::init_flocking(KnowledgeKinematicGroup& group)
+void NPC::init_flocking(KnowledgeKinematicGroup* group)
 {
-	flockingBehaviour = new Flocking(*this->kinematics, group);
+	flockingBehaviour = new Flocking(this->kinematics, group);
 }
 
 

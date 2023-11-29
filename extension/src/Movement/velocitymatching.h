@@ -13,8 +13,8 @@ private:
 protected:
 public:
 	VelocityMatching();
-	VelocityMatching(Kinematics& inKin);
-	VelocityMatching(Kinematics& inKin, KnowledgeKinematicGroup& group);
+	VelocityMatching(Kinematics* inKin);
+	VelocityMatching(Kinematics* inKin, KnowledgeKinematicGroup* group);
 	~VelocityMatching();
 
 	SteeringForce get_force() override;

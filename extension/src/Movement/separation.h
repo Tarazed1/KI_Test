@@ -13,8 +13,8 @@ private:
 protected:
 public:
 	Separation();
-	Separation(Kinematics& inKin);
-	Separation(Kinematics& inKin, KnowledgeKinematicGroup& group);
+	Separation(Kinematics* inKin);
+	Separation(Kinematics* inKin, KnowledgeKinematicGroup* group);
 	~Separation();
 
 	SteeringForce get_force() override;

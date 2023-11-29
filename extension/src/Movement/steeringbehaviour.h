@@ -12,10 +12,11 @@ using namespace godot;
 
 class SteeringBehaviour {
 private:
-
+	float timer;
 protected:
 	//FaceingMode faceMode;
 	//KnowledgeCollisionVector knowledgeCollisionWithFloor
+	float subTimer;
 
 	SteeringForce force;
 	Kinematics* kinematics;
@@ -28,7 +29,7 @@ protected:
 	virtual Vector3 angle_to_directionvector(float inAngle);
 public:
 	SteeringBehaviour();
-	SteeringBehaviour(Kinematics& inKin);
+	SteeringBehaviour(Kinematics* inKin);
 	~SteeringBehaviour();
 
 	void update(double time, Vector3 pos);

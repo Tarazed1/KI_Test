@@ -8,7 +8,7 @@ Arrive::Arrive()
 	breakFactor = 0.25f;
 }
 
-Arrive::Arrive(Kinematics& inKin) : SteeringBehaviour(inKin)
+Arrive::Arrive(Kinematics* inKin) : SteeringBehaviour(inKin)
 {
 	breakRadius = 10.0f;
 	breakFactor = 0.25f;

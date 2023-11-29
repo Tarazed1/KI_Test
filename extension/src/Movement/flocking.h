@@ -24,8 +24,8 @@ private:
 protected:
 public:
     Flocking();
-    Flocking(Kinematics& inKin);
-    Flocking(Kinematics& inKin, KnowledgeKinematicGroup& group);
+    Flocking(Kinematics* inKin);
+    Flocking(Kinematics* inKin, KnowledgeKinematicGroup* group);
     ~Flocking();
 
     SteeringForce get_force() override;

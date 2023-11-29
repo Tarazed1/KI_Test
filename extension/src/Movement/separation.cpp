@@ -6,13 +6,13 @@ Separation::Separation()
 {
 }
 
-Separation::Separation(Kinematics& inKin)
+Separation::Separation(Kinematics* inKin)
 {
 }
 
-Separation::Separation(Kinematics& inKin, KnowledgeKinematicGroup& group) : SteeringBehaviour(inKin)
+Separation::Separation(Kinematics* inKin, KnowledgeKinematicGroup* group) : SteeringBehaviour(inKin)
 {
-	buddies = &group;
+	buddies = group;
 }
 
 Separation::~Separation()
@@ -42,6 +42,6 @@ SteeringForce Separation::get_force()
 			}
 		}
 	}
-
+	//UtilityFunctions::print("Separation: ", aSteeringForce.movementForce);
 	return aSteeringForce;
 }

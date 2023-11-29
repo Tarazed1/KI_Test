@@ -14,7 +14,7 @@ protected:
 
 public:
 	Arrive();
-	Arrive(Kinematics& inKin);
+	Arrive(Kinematics* inKin);
 	~Arrive();
 
 	void SetTarget(KnowledgePosition* inNewTarget);

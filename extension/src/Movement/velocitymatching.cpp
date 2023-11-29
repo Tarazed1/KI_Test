@@ -1,16 +1,17 @@
 #include "velocitymatching.h"
+#include <godot_cpp/variant/utility_functions.hpp>
 
 VelocityMatching::VelocityMatching() : SteeringBehaviour()
 {
 }
 
-VelocityMatching::VelocityMatching(Kinematics& inKin) : SteeringBehaviour(inKin)
+VelocityMatching::VelocityMatching(Kinematics* inKin) : SteeringBehaviour(inKin)
 {
 }
 
-VelocityMatching::VelocityMatching(Kinematics& inKin, KnowledgeKinematicGroup& group) : SteeringBehaviour(inKin)
+VelocityMatching::VelocityMatching(Kinematics* inKin, KnowledgeKinematicGroup* group) : SteeringBehaviour(inKin)
 {
-	buddies = &group;
+	buddies = group;
 }
 
 VelocityMatching::~VelocityMatching()
@@ -41,10 +42,12 @@ SteeringForce VelocityMatching::get_force()
 			float distance = dir.length();
 			if (distance < activationDistance) {
 				averageVelocity += target->velocity;
+				//UtilityFunctions::print("AAAA", distance, averageVelocity);
 			}
 		}
 	}
 
 	aSteeringForce.movementForce = averageVelocity;
+	//UtilityFunctions::print("VM: ", aSteeringForce.movementForce);
 	return aSteeringForce;
 }

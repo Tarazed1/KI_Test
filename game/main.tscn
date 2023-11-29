@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dgm4ah3j8jxke"]
 
 [ext_resource type="Script" path="res://GameManager.gd" id="2_34i8e"]
-[ext_resource type="Script" path="res://FlockingSimulator.gd" id="2_mikyb"]
+[ext_resource type="Script" path="res://FlockingSimulator.gd" id="2_vrw0g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v2myc"]
 
@@ -29,4 +29,4 @@ visible = false
 script = ExtResource("2_34i8e")
 
 [node name="KnowledgeKinematicGroup" type="KnowledgeKinematicGroup" parent="."]
-script = ExtResource("2_mikyb")
+script = ExtResource("2_vrw0g")

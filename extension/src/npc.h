@@ -54,7 +54,7 @@ public:
 	void set_color(const Color c);
 	void set_target(Vector3 targetPos);
 	Kinematics* get_kinematics() const;
-	void init_flocking(KnowledgeKinematicGroup& group);
+	void init_flocking(KnowledgeKinematicGroup* group);
 };
 
 #endif // !NPC_CLASS

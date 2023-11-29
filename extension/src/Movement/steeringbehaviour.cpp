@@ -48,11 +48,11 @@ SteeringBehaviour::SteeringBehaviour()
     kinematics = new Kinematics();
 }
 
-SteeringBehaviour::SteeringBehaviour(Kinematics& inKin)
+SteeringBehaviour::SteeringBehaviour(Kinematics* inKin)
 {
     force = SteeringForce();
     standartForce = Vector3();
-    kinematics = &inKin;
+    kinematics = inKin;
 }
 
 SteeringBehaviour::~SteeringBehaviour()
@@ -70,6 +70,12 @@ void SteeringBehaviour::set_standart_force()
 
 void SteeringBehaviour::update(double time, Vector3 pos)
 {
+    timer += static_cast<float>(time);
+    subTimer += static_cast<float>(time);
+    if (timer > 5.0f) {
+        UtilityFunctions::print("Debug: ", kinematics->position, kinematics->velocity);
+        timer = 0.0f;
+    }
     kinematics->position = pos;
     force = get_force();
     kinematics->velocity = force.movementForce * time * 10.0f;

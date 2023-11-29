@@ -7,7 +7,7 @@ Flee::Flee() {
 
 }
 
-Flee::Flee(Kinematics& inKin) : SteeringBehaviour(inKin)
+Flee::Flee(Kinematics* inKin) : SteeringBehaviour(inKin)
 {
 }
 

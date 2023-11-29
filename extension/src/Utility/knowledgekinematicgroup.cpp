@@ -1,5 +1,7 @@
 #include "knowledgekinematicgroup.h"
 #include <godot_cpp/variant/utility_functions.hpp>
+#include <sstream>
+#include <string>
 
 void KnowledgeKinematicGroup::_bind_methods()
 {
@@ -18,9 +20,11 @@ KnowledgeKinematicGroup::~KnowledgeKinematicGroup()
 
 }
 
-Kinematics* KnowledgeKinematicGroup::get_kinematic(int index)
+Kinematics* KnowledgeKinematicGroup::get_kinematic(int index) const
 {
-	if (index >= kinematics.size()) return nullptr;
+	if (index >= kinematics.size()) {
+		return nullptr;
+	}
 	else return kinematics[index];
 }
 
