@@ -16,8 +16,8 @@ Kinematics::Kinematics()
 
 	maxAngularForce = 2.0f;
 	maxAngularVelocity = 2.0f;
-	maxMovementForce = 0.4f;
-	maxMovementVelocity = 0.4f;
+	maxMovementForce = 15.0f;
+	maxMovementVelocity = 15.0f;
 }
 
 Kinematics::~Kinematics()

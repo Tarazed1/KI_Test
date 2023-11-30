@@ -29,6 +29,7 @@ NPC::NPC() {
 	fleeBehaviour = new Flee(this->kinematics);
 	seekBehaviour = new Seek(this->kinematics);
 	arriveBehaviour = new Arrive(this->kinematics);
+	pathBehaviour = new Pathgrapplinghook(this->kinematics);
 	steeringBehaviour = fleeBehaviour;
 }
 
@@ -74,6 +75,11 @@ void NPC::change_behaviour_intern()
 		}
 		else {
 			currentBehaviour = 0;
+		}
+	case 4:
+		if (pathBehaviour) {
+			steeringBehaviour = pathBehaviour;
+			break;
 		}
 	default:
 		steeringBehaviour = fleeBehaviour;

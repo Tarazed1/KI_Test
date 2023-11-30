@@ -9,6 +9,7 @@
 #include "Movement/seek.h"
 #include "Utility/knowledgekinematicgroup.h"
 #include "Movement/flocking.h"
+#include "Movement/pathgrapplinghook.h"
 #include <godot_cpp/classes/node3d.hpp>
 #include <godot_cpp/variant/vector3.hpp>
 #include <godot_cpp/classes/geometry_instance3d.hpp>
@@ -37,6 +38,7 @@ class NPC : public Node3D {
 	Seek* seekBehaviour;
 	Arrive* arriveBehaviour;
 	Flocking* flockingBehaviour;
+	Pathgrapplinghook* pathBehaviour;
 
 	void change_behaviour_intern();
 

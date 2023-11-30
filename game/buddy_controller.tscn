@@ -1,0 +1,157 @@
+[gd_scene load_steps=26 format=3 uid="uid://tcigqfcfcqv6"]
+
+[ext_resource type="Script" path="res://BuddyController.gd" id="1_kr4yd"]
+
+[sub_resource type="Material" id="Material_s0mlh"]
+resource_local_to_scene = false
+resource_name = ""
+
+[sub_resource type="SphereMesh" id="SphereMesh_jxoyi"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_y7k1a"]
+
+[sub_resource type="Material" id="Material_6km7r"]
+resource_local_to_scene = false
+resource_name = ""
+
+[sub_resource type="SphereMesh" id="SphereMesh_1xalu"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_wo56p"]
+
+[sub_resource type="Material" id="Material_rnp5y"]
+resource_local_to_scene = false
+resource_name = ""
+
+[sub_resource type="SphereMesh" id="SphereMesh_8f0ne"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_kg0i5"]
+
+[sub_resource type="Material" id="Material_fytsq"]
+resource_local_to_scene = false
+resource_name = ""
+
+[sub_resource type="SphereMesh" id="SphereMesh_aavym"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_65mgd"]
+
+[sub_resource type="Material" id="Material_ru8sp"]
+resource_local_to_scene = false
+resource_name = ""
+
+[sub_resource type="SphereMesh" id="SphereMesh_rpd0d"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_7tei7"]
+
+[sub_resource type="Material" id="Material_0mgg6"]
+resource_local_to_scene = false
+resource_name = ""
+
+[sub_resource type="SphereMesh" id="SphereMesh_8bror"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_vwxrx"]
+
+[sub_resource type="Material" id="Material_dv4bt"]
+resource_local_to_scene = false
+resource_name = ""
+
+[sub_resource type="SphereMesh" id="SphereMesh_ftu4p"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ptdjn"]
+
+[sub_resource type="Material" id="Material_82h0c"]
+resource_local_to_scene = false
+resource_name = ""
+
+[sub_resource type="SphereMesh" id="SphereMesh_aitya"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_drbn1"]
+
+[node name="BuddyController" type="BuddyController"]
+numberOfNPCs = 10
+script = ExtResource("1_kr4yd")
+
+[node name="NPC" type="NPC" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="_MeshInstance3D_18002" type="MeshInstance3D" parent="NPC"]
+material_override = SubResource("Material_s0mlh")
+mesh = SubResource("SphereMesh_jxoyi")
+
+[node name="_MeshInstance3D_18003" type="MeshInstance3D" parent="NPC/_MeshInstance3D_18002"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
+mesh = SubResource("SphereMesh_y7k1a")
+
+[node name="NPC2" type="NPC" parent="."]
+transform = Transform3D(0.0465521, -4.19591e-41, -0.998916, 0, 1, -4.20039e-41, 0.998916, 1.95481e-42, 0.0465521, -121.52, -5.10969e-39, 5.66203)
+
+[node name="_MeshInstance3D_18004" type="MeshInstance3D" parent="NPC2"]
+material_override = SubResource("Material_6km7r")
+mesh = SubResource("SphereMesh_1xalu")
+
+[node name="_MeshInstance3D_18005" type="MeshInstance3D" parent="NPC2/_MeshInstance3D_18004"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
+mesh = SubResource("SphereMesh_wo56p")
+
+[node name="NPC3" type="NPC" parent="."]
+transform = Transform3D(0.277028, -4.78221e-41, -0.960862, 0, 1, -4.97699e-41, 0.960862, 1.37874e-41, 0.277028, 1, 0, 1)
+
+[node name="_MeshInstance3D_18006" type="MeshInstance3D" parent="NPC3"]
+material_override = SubResource("Material_rnp5y")
+mesh = SubResource("SphereMesh_8f0ne")
+
+[node name="_MeshInstance3D_18007" type="MeshInstance3D" parent="NPC3/_MeshInstance3D_18006"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
+mesh = SubResource("SphereMesh_kg0i5")
+
+[node name="NPC4" type="NPC" parent="."]
+
+[node name="_MeshInstance3D_18008" type="MeshInstance3D" parent="NPC4"]
+material_override = SubResource("Material_fytsq")
+mesh = SubResource("SphereMesh_aavym")
+
+[node name="_MeshInstance3D_18009" type="MeshInstance3D" parent="NPC4/_MeshInstance3D_18008"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
+mesh = SubResource("SphereMesh_65mgd")
+
+[node name="NPC5" type="NPC" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="_MeshInstance3D_18010" type="MeshInstance3D" parent="NPC5"]
+material_override = SubResource("Material_ru8sp")
+mesh = SubResource("SphereMesh_rpd0d")
+
+[node name="_MeshInstance3D_18011" type="MeshInstance3D" parent="NPC5/_MeshInstance3D_18010"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
+mesh = SubResource("SphereMesh_7tei7")
+
+[node name="NPC6" type="NPC" parent="."]
+transform = Transform3D(0.0465521, -4.19591e-41, -0.998916, 0, 1, -4.20039e-41, 0.998916, 1.95481e-42, 0.0465521, -121.52, -5.10969e-39, 5.66203)
+
+[node name="_MeshInstance3D_18012" type="MeshInstance3D" parent="NPC6"]
+material_override = SubResource("Material_0mgg6")
+mesh = SubResource("SphereMesh_8bror")
+
+[node name="_MeshInstance3D_18013" type="MeshInstance3D" parent="NPC6/_MeshInstance3D_18012"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
+mesh = SubResource("SphereMesh_vwxrx")
+
+[node name="NPC7" type="NPC" parent="."]
+transform = Transform3D(0.277028, -4.78221e-41, -0.960862, 0, 1, -4.97699e-41, 0.960862, 1.37874e-41, 0.277028, 1, 0, 1)
+
+[node name="_MeshInstance3D_18014" type="MeshInstance3D" parent="NPC7"]
+material_override = SubResource("Material_dv4bt")
+mesh = SubResource("SphereMesh_ftu4p")
+
+[node name="_MeshInstance3D_18015" type="MeshInstance3D" parent="NPC7/_MeshInstance3D_18014"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
+mesh = SubResource("SphereMesh_ptdjn")
+
+[node name="NPC8" type="NPC" parent="."]
+
+[node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC8"]
+material_override = SubResource("Material_82h0c")
+mesh = SubResource("SphereMesh_aitya")
+
+[node name="_MeshInstance3D_18017" type="MeshInstance3D" parent="NPC8/_MeshInstance3D_18016"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
+mesh = SubResource("SphereMesh_drbn1")
