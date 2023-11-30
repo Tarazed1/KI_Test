@@ -20,7 +20,6 @@ public:
 	BuddyController();
 	~BuddyController();
 
-	void _ready();
 	void init_group();
 	void set_npcs_count(int count);
 	int get_npcs_count();

@@ -23,7 +23,10 @@ void Seek::SetTarget(KnowledgePosition* inNewTarget)
 SteeringForce Seek::get_force()
 {
 	SteeringForce aSteeringForce;
-	if (!target) return aSteeringForce;
+	if (!target) {
+		UtilityFunctions::printerr("Your target is empty. (Location: SSeek get_force())");
+		return aSteeringForce;
+	}
 
 	aSteeringForce.movementForce = target->get_position() - this->kinematics->position;
 	aSteeringForce.movementForce = aSteeringForce.movementForce.normalized() * this->kinematics->maxMovementForce;

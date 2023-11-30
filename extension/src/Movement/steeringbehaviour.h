@@ -16,7 +16,6 @@ private:
 protected:
 	//FaceingMode faceMode;
 	//KnowledgeCollisionVector knowledgeCollisionWithFloor
-	float subTimer;
 
 	SteeringForce force;
 	Kinematics* kinematics;

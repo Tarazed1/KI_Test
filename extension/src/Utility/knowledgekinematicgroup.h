@@ -12,13 +12,13 @@ class KnowledgeKinematicGroup : public Knowledge, public Node3D {
 private:
 	GDCLASS(KnowledgeKinematicGroup, Node3D);
 	
+	List<Kinematics*> kinematics;
 	int size;
 protected:
 	static void _bind_methods();
 public:
 	KnowledgeKinematicGroup();
 	~KnowledgeKinematicGroup();
-std::vector<Kinematics*> kinematics;
 	Kinematics* get_kinematic(int index, bool debug); 
 	int get_size();
 	void subscribe(Kinematics* inKin);

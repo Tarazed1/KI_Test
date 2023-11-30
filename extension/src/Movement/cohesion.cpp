@@ -33,10 +33,9 @@ SteeringForce Cohesion::get_force()
 	Kinematics* kinematicBoy = this->kinematics;
 
 	for (int i = 0; i < buddies->get_size(); i++) {
-		Kinematics* target = buddies->kinematics.at(i)/*dynamic_cast<Kinematics*>(buddies->get_kinematic(i, false))*/;
-		if (target == nullptr) UtilityFunctions::print("EEEEEEEEEEEEEEEEEE");
+		Kinematics* target = buddies->get_kinematic(i, false);
+		if (target == nullptr) UtilityFunctions::printerr("Target is null. Can't calculate SteeringForce. (Location: Cohesion, get_force())");
 		if (target == kinematicBoy) {
-			//UtilityFunctions::print("Cohesion: same target");	
 			continue;
 		}
 		if (target) {
@@ -45,9 +44,6 @@ SteeringForce Cohesion::get_force()
 			if (distance < activationDistance) {
 				centerOfMass += target->position;
 				numberOfRelativBoys++;
-				if (subTimer > 5.0f) {
-					UtilityFunctions::print("Cohesion1: ",target->position, centerOfMass, dir, numberOfRelativBoys);
-				}
 			}
 		}
 	}
@@ -57,12 +53,7 @@ SteeringForce Cohesion::get_force()
 		float force = this->kinematics->maxMovementForce * dir.length() / activationDistance;
 		dir = dir.normalized() * force;
 		aSteeringForce.movementForce = dir;
-		if (subTimer > 5.0f) {
-			UtilityFunctions::print("Cohesion2: ", dir, force);
-			subTimer = 0.0f;
-		}
 	}
-	UtilityFunctions::print("Cohesion: ", aSteeringForce.movementForce);
 
 	return aSteeringForce;
 }

@@ -24,17 +24,17 @@ KnowledgeKinematicGroup::~KnowledgeKinematicGroup()
 
 Kinematics* KnowledgeKinematicGroup::get_kinematic(int index, bool debug)
 {
-	//if (index >= 0 && kinematics.size() > index) {
-		//if (debug) {
-			if (kinematics[index] == nullptr) UtilityFunctions::print("merh a");
-			//UtilityFunctions::print("A edit: ", index, kinematics.size());	
-			//UtilityFunctions::print("intern: ", kinematics[index]->position, kinematics[index]->velocity);
-		//}
+	if (index >= kinematics.size()) {
+		UtilityFunctions::printerr("Index out of bounds. (Location: KnowledgeKinemticGroup get_kinematic())");
+		return nullptr;
+	}
+	else {
+		if (kinematics[index] == nullptr) {
+			UtilityFunctions::printerr("Kinematic is empty");
+			return nullptr;
+		}
 		return kinematics[index];
-	//}
-	//else {
-	//	return nullptr;
-	//}
+	}
 }
 
 int KnowledgeKinematicGroup::get_size()
@@ -44,14 +44,16 @@ int KnowledgeKinematicGroup::get_size()
 
 void KnowledgeKinematicGroup::subscribe(Kinematics* inKin)
 {
-	if(inKin == nullptr) UtilityFunctions::print("oh no im dying");
-	//UtilityFunctions::print("Subscribe: ", inKin->position, inKin->velocity);
+	if (inKin == nullptr) {
+		UtilityFunctions::printerr("Kinematics is null. (Location: KnowledgeKinemticGroup subscribe())");
+		return;
+	}
 	kinematics.push_back(inKin);
 }
 
 void KnowledgeKinematicGroup::unsubscribe(Kinematics* outKin)
 {
-	//kinematics.erase(outKin);
+	kinematics.erase(outKin);
 }
 
 void KnowledgeKinematicGroup::debug()

@@ -23,6 +23,7 @@ SteeringForce VelocityMatching::get_force()
 	SteeringForce aSteeringForce;
 
 	if (!buddies) {
+		UtilityFunctions::printerr("Your Buddies are empty. (Location: VelocityMatching get_force())");
 		return aSteeringForce;
 	}
 	if (buddies->get_size() == 0) {
@@ -34,6 +35,7 @@ SteeringForce VelocityMatching::get_force()
 
 	for (size_t i = 0; i < buddies->get_size(); i++) {
 		Kinematics* target = buddies->get_kinematic(i, false);
+		if(target == nullptr) UtilityFunctions::printerr("Target is null. (Location VelocityMatching get_force())");
 		if (target == kinematicBoy) {
 			continue;
 		} 
@@ -42,12 +44,10 @@ SteeringForce VelocityMatching::get_force()
 			float distance = dir.length();
 			if (distance < activationDistance) {
 				averageVelocity += target->velocity;
-				//UtilityFunctions::print("AAAA", distance, averageVelocity);
 			}
 		}
 	}
-
 	aSteeringForce.movementForce = averageVelocity;
-	UtilityFunctions::print("VM: ", aSteeringForce.movementForce);
+
 	return aSteeringForce;
 }

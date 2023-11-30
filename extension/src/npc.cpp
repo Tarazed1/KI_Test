@@ -30,8 +30,6 @@ NPC::NPC() {
 	seekBehaviour = new Seek(this->kinematics);
 	arriveBehaviour = new Arrive(this->kinematics);
 	steeringBehaviour = fleeBehaviour;
-
-	UtilityFunctions::print("NPC init");
 }
 
 NPC::~NPC() {
@@ -41,22 +39,15 @@ NPC::~NPC() {
 void NPC::_ready() {
 	this->add_child(model);
 	this->model->add_child(nose);
-	UtilityFunctions::print("readied npc");
 } 
 
 
 void NPC::_process(double delta) {
 	if (Engine::get_singleton()->is_editor_hint()) return;
-		//set_process_mode(Node::ProcessMode::PROCESS_MODE_DISABLED);
 	if (changeingBehaviour) change_behaviour_intern();
-	localTime += 0.1 * delta;
 	steeringBehaviour->update(delta, position);
 	if(this->kinematics->velocity != Vector3(0,0,0)) look_at(this->kinematics->velocity);
 	this->set_position(steeringBehaviour->get_kinematics()->position);
-	//if (localTime > 1) {
-	//	UtilityFunctions::print("Processing NPC");
-	//	localTime = 0.0f;
-	//}
 }
 
 
@@ -117,7 +108,6 @@ void NPC::set_position_intern(const Vector3 pos)
 
 Kinematics* NPC::get_kinematics()
 {
-	UtilityFunctions::print("getting kinematics");
 	return this->kinematics;
 }
 
@@ -131,7 +121,7 @@ String NPC::debug_buddies()
 	if (flockingBehaviour) {
 		KnowledgeKinematicGroup* buddies = flockingBehaviour->get_buddies();
 		if (buddies == nullptr) {
-			return "AAAAAAAAAAAAAAAAAAAAA";
+			return "Buddies are empty (Location: NPC debug_buddies.)";
 		}
 		godot::String in = buddies->get_kinematic(0, false)->velocity;
 		in += "  ";

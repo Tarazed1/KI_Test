@@ -23,14 +23,17 @@ SteeringForce Separation::get_force()
 {
 	SteeringForce aSteeringForce;
 
-	if (!buddies) return aSteeringForce;
+	if (!buddies) {
+		UtilityFunctions::printerr("Your Buddies are empty. (Location: Separation get_force())");
+		return aSteeringForce;
+	}
 	if (buddies->get_size() == 0) return aSteeringForce;
 
 	float fov = DEGREES_TO_RADIANS(360);
 
 	for (size_t i = 0; i < buddies->get_size(); i++) {
 		Kinematics* target = buddies->get_kinematic(i, false); 
-		if (target == nullptr) UtilityFunctions::print("aint nothing but a mistake");
+		if (target == nullptr) UtilityFunctions::printerr("Target is null. (Location Separation get_force())");
 		if (target == this->kinematics) continue;
 		
 		if (target) {
@@ -43,6 +46,6 @@ SteeringForce Separation::get_force()
 			}
 		}
 	}
-	UtilityFunctions::print("Separation: ", aSteeringForce.movementForce);
+
 	return aSteeringForce;
 }

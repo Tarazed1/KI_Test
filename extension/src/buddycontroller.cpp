@@ -22,33 +22,32 @@ BuddyController::~BuddyController()
 	group = nullptr;
 }
 
-void BuddyController::_ready()
-{
-	//for (int i = 0; i < numberOfNPCs; i++) {
-	//	NPC* n = new NPC();
-	//	npcs.push_back(n);
-	//	if (n == nullptr) UtilityFunctions::print("its a me malario");
-	//	this->add_child(n);
-	//	n->set_position_intern(Vector3(5, 0, 5));
-	//	n->init_flocking(group);
-	//	n->change_behaviour(3);
-	//}
-	//for (int i = 0; i < numberOfNPCs; i++) {
-	//	group->subscribe(npcs[i]->get_kinematics());
-	//}
-}
-
+/// <summary>
+/// Initializes the buddy group for Flocking
+/// </summary>
 void BuddyController::init_group()
 {
+	//RNG for the position - changeable for own random?
 	RandomNumberGenerator rng = RandomNumberGenerator();
+
+	//iterate throuh all direct children to get your buddies
 	for (int i = 0; i < get_child_count(false); i++) {
+		//try to cast child into NPC*
 		NPC* n = dynamic_cast<NPC*>(get_child(i));
-		npcs.push_back(n);
-		n->set_position_intern(Vector3(rng.randf_range(-5, 5), 0, rng.randf_range(-5, 5)));
-		group->subscribe(n->get_kinematics());
-		n->init_flocking(group);
-		n->change_behaviour(3);
+		//if child is a npc push it into the nps-list, set its position random and initialize the flocking behaviour
+		if (n) {
+			npcs.push_back(n);
+			n->set_position_intern(Vector3(rng.randf_range(-5, 5), 0, rng.randf_range(-5, 5)));
+			group->subscribe(n->get_kinematics());
+			n->init_flocking(group);
+			n->change_behaviour(3);
+		}
+		else {
+			UtilityFunctions::printerr("Found a child that is not a NPC class. (Location: BuddyController, init_group())");
+		}
 	}
+
+	//take one NPC and give it a other beaviour, so that the others can work correctly
 	dynamic_cast<NPC*>(get_child(3))->change_behaviour(0);
 	dynamic_cast<NPC*>(get_child(3))->set_target(Vector3(10, 0, 10));
 }
