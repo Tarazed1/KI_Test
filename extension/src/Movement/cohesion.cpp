@@ -32,10 +32,11 @@ SteeringForce Cohesion::get_force()
 	int numberOfRelativBoys = 0;
 	Kinematics* kinematicBoy = this->kinematics;
 
-	for (size_t i = 0; i < buddies->get_size(); i++) {
-		Kinematics* target = buddies->get_kinematic(i);
+	for (int i = 0; i < buddies->get_size(); i++) {
+		Kinematics* target = buddies->kinematics.at(i)/*dynamic_cast<Kinematics*>(buddies->get_kinematic(i, false))*/;
+		if (target == nullptr) UtilityFunctions::print("EEEEEEEEEEEEEEEEEE");
 		if (target == kinematicBoy) {
-			UtilityFunctions::print("Cohesion: same target");	
+			//UtilityFunctions::print("Cohesion: same target");	
 			continue;
 		}
 		if (target) {
@@ -61,7 +62,7 @@ SteeringForce Cohesion::get_force()
 			subTimer = 0.0f;
 		}
 	}
-	//UtilityFunctions::print("Cohesion: ", aSteeringForce.movementForce);
+	UtilityFunctions::print("Cohesion: ", aSteeringForce.movementForce);
 
 	return aSteeringForce;
 }

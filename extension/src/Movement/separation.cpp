@@ -29,7 +29,8 @@ SteeringForce Separation::get_force()
 	float fov = DEGREES_TO_RADIANS(360);
 
 	for (size_t i = 0; i < buddies->get_size(); i++) {
-		Kinematics* target = buddies->get_kinematic(i); 
+		Kinematics* target = buddies->get_kinematic(i, false); 
+		if (target == nullptr) UtilityFunctions::print("aint nothing but a mistake");
 		if (target == this->kinematics) continue;
 		
 		if (target) {
@@ -42,6 +43,6 @@ SteeringForce Separation::get_force()
 			}
 		}
 	}
-	//UtilityFunctions::print("Separation: ", aSteeringForce.movementForce);
+	UtilityFunctions::print("Separation: ", aSteeringForce.movementForce);
 	return aSteeringForce;
 }

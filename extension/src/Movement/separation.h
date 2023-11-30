@@ -9,7 +9,7 @@ using namespace godot;
 class Separation : public SteeringBehaviour {
 private:
 	KnowledgeKinematicGroup* buddies;
-	const float activationDistance = 5.0f;
+	const float activationDistance = 10.0f;
 protected:
 public:
 	Separation();

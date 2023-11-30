@@ -33,7 +33,7 @@ SteeringForce VelocityMatching::get_force()
 	Kinematics* kinematicBoy = this->kinematics;
 
 	for (size_t i = 0; i < buddies->get_size(); i++) {
-		Kinematics* target = buddies->get_kinematic(i);
+		Kinematics* target = buddies->get_kinematic(i, false);
 		if (target == kinematicBoy) {
 			continue;
 		} 
@@ -48,6 +48,6 @@ SteeringForce VelocityMatching::get_force()
 	}
 
 	aSteeringForce.movementForce = averageVelocity;
-	//UtilityFunctions::print("VM: ", aSteeringForce.movementForce);
+	UtilityFunctions::print("VM: ", aSteeringForce.movementForce);
 	return aSteeringForce;
 }

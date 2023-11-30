@@ -9,7 +9,7 @@ using namespace godot;
 class VelocityMatching : public SteeringBehaviour {
 private:
 	KnowledgeKinematicGroup* buddies;
-	const float activationDistance = 6.0f;
+	const float activationDistance = 12.0f;
 protected:
 public:
 	VelocityMatching();

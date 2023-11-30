@@ -6,6 +6,7 @@
 #include "option.h"
 #include "random.h"
 #include "Movement/kinematics.h"
+#include "buddycontroller.h"
 #include "option_text_out.h"
 #include <gdextension_interface.h>
 #include <godot_cpp/core/class_db.hpp>
@@ -23,6 +24,7 @@ void initialize_summator_types(ModuleInitializationLevel p_level)
 	//ClassDB::register_class<SteeringForce>();
 	//ClassDB::register_class<Movement>();
 	ClassDB::register_class<NPC>();
+	ClassDB::register_class<BuddyController>();
 	ClassDB::register_class<KnowledgeKinematicGroup>();
 	ClassDB::register_class<Kinematics>();
 	ClassDB::register_class<Random>();

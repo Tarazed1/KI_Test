@@ -28,6 +28,7 @@ public:
     Flocking(Kinematics* inKin, KnowledgeKinematicGroup* group);
     ~Flocking();
 
+    KnowledgeKinematicGroup* get_buddies();
     SteeringForce get_force() override;
 };
 

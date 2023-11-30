@@ -48,13 +48,13 @@ public:
 	~NPC();
 	void _ready() override;
 	void _process(double delta) override;
-	void set_position(const Vector3 pos);
 	void change_behaviour(int index);
-	Vector3 get_position() const;
 	void set_color(const Color c);
 	void set_target(Vector3 targetPos);
-	Kinematics* get_kinematics() const;
+	void set_position_intern(const Vector3 pos);
+	Kinematics* get_kinematics();
 	void init_flocking(KnowledgeKinematicGroup* group);
+	String debug_buddies();
 };
 
 #endif // !NPC_CLASS
