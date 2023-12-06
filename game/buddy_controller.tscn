@@ -71,7 +71,7 @@ numberOfNPCs = 10
 script = ExtResource("1_kr4yd")
 
 [node name="NPC" type="NPC" parent="."]
-transform = Transform3D(0.87887, 0, 0.477061, 0, 1, 0, -0.477061, 0, 0.87887, 1, 0, 1)
+transform = Transform3D(0.499285, 0, 0.866438, 0, 1, 0, -0.866438, 0, 0.499285, 1, 0, 1)
 
 [node name="_MeshInstance3D_18002" type="MeshInstance3D" parent="NPC"]
 material_override = SubResource("Material_s0mlh")
@@ -82,7 +82,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_y7k1a")
 
 [node name="NPC2" type="NPC" parent="."]
-transform = Transform3D(0.259739, 4.0562e-41, 0.965679, 0, 1, -4.20039e-41, -0.965679, 1.09091e-41, 0.259739, -121.52, -5.10969e-39, 5.66203)
+transform = Transform3D(-0.893441, 1.88671e-41, 0.449182, 0, 1, -4.20039e-41, -0.449182, -3.75282e-41, -0.893441, -121.52, -5.10969e-39, 5.66203)
 
 [node name="_MeshInstance3D_18004" type="MeshInstance3D" parent="NPC2"]
 material_override = SubResource("Material_6km7r")
@@ -93,7 +93,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_wo56p")
 
 [node name="NPC3" type="NPC" parent="."]
-transform = Transform3D(-0.227469, -4.84681e-41, -0.973783, 0, 1, -4.97699e-41, 0.973783, -1.13169e-41, -0.227469, 1, 0, 1)
+transform = Transform3D(-0.299931, 4.74788e-41, 0.953959, 0, 1, -4.97699e-41, -0.953959, -1.49336e-41, -0.299931, 1, 0, 1)
 
 [node name="_MeshInstance3D_18006" type="MeshInstance3D" parent="NPC3"]
 material_override = SubResource("Material_rnp5y")
@@ -104,7 +104,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_kg0i5")
 
 [node name="NPC4" type="NPC" parent="."]
-transform = Transform3D(-0.947205, 0, 0.32063, 0, 1, 0, -0.32063, 0, -0.947205, 0, 0, 0)
+transform = Transform3D(0.745607, 0, -0.666387, 0, 1, 0, 0.666387, 0, 0.745607, 0, 0, 0)
 
 [node name="_MeshInstance3D_18008" type="MeshInstance3D" parent="NPC4"]
 material_override = SubResource("Material_fytsq")
@@ -115,7 +115,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_65mgd")
 
 [node name="NPC5" type="NPC" parent="."]
-transform = Transform3D(-0.98019, 0, 0.19806, 0, 1, 0, -0.19806, 0, -0.98019, 1, 0, 1)
+transform = Transform3D(-0.549866, 0, -0.835253, 0, 1, 0, 0.835253, 0, -0.549866, 1, 0, 1)
 
 [node name="_MeshInstance3D_18010" type="MeshInstance3D" parent="NPC5"]
 material_override = SubResource("Material_ru8sp")
@@ -126,7 +126,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_7tei7")
 
 [node name="NPC6" type="NPC" parent="."]
-transform = Transform3D(-0.0790592, 4.18764e-41, 0.996872, 0, 1, -4.20039e-41, -0.996872, -3.32108e-42, -0.0790592, -121.52, -5.10969e-39, 5.66203)
+transform = Transform3D(-0.395357, 3.85848e-41, 0.91853, 0, 1, -4.20039e-41, -0.91853, -1.66082e-41, -0.395357, -121.52, -5.10969e-39, 5.66203)
 
 [node name="_MeshInstance3D_18012" type="MeshInstance3D" parent="NPC6"]
 material_override = SubResource("Material_0mgg6")
@@ -137,7 +137,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_vwxrx")
 
 [node name="NPC7" type="NPC" parent="."]
-transform = Transform3D(-0.957384, -1.43717e-41, -0.288821, 0, 1, -4.97699e-41, 0.288821, -4.7647e-41, -0.957384, 1, 0, 1)
+transform = Transform3D(0.235272, -4.83714e-41, -0.97193, 0, 1, -4.97699e-41, 0.97193, 1.17064e-41, 0.235272, 1, 0, 1)
 
 [node name="_MeshInstance3D_18014" type="MeshInstance3D" parent="NPC7"]
 material_override = SubResource("Material_dv4bt")
@@ -148,7 +148,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_ptdjn")
 
 [node name="NPC8" type="NPC" parent="."]
-transform = Transform3D(0.641699, 0, 0.766957, 0, 1, 0, -0.766957, 0, 0.641699, 0, 0, 0)
+transform = Transform3D(-0.961729, 0, -0.274005, 0, 1, 0, 0.274005, 0, -0.961729, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC8"]
 material_override = SubResource("Material_82h0c")
@@ -159,7 +159,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC9" type="NPC" parent="."]
-transform = Transform3D(-0.229128, 0, -0.973397, 0, 1, 0, 0.973397, 0, -0.229128, 0, 0, 0)
+transform = Transform3D(0.892556, 0, 0.450937, 0, 1, 0, -0.450937, 0, 0.892556, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC9"]
 material_override = SubResource("Material_82h0c")
@@ -170,7 +170,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC10" type="NPC" parent="."]
-transform = Transform3D(-0.99649, 0, 0.0837233, 0, 1, 0, -0.0837233, 0, -0.99649, 0, 0, 0)
+transform = Transform3D(-0.752863, 0, -0.658179, 0, 1, 0, 0.658179, 0, -0.752863, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC10"]
 material_override = SubResource("Material_82h0c")
@@ -181,7 +181,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC11" type="NPC" parent="."]
-transform = Transform3D(-0.335373, 0, 0.942086, 0, 1, 0, -0.942086, 0, -0.335373, 0, 0, 0)
+transform = Transform3D(-0.190492, 0, 0.981689, 0, 1, 0, -0.981689, 0, -0.190492, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC11"]
 material_override = SubResource("Material_82h0c")
@@ -192,7 +192,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC12" type="NPC" parent="."]
-transform = Transform3D(0.59099, 0, -0.806681, 0, 1, 0, 0.806681, 0, 0.59099, 0, 0, 0)
+transform = Transform3D(0.999434, 0, -0.0336981, 0, 1, 0, 0.0336981, 0, 0.999434, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC12"]
 material_override = SubResource("Material_82h0c")
@@ -203,7 +203,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC13" type="NPC" parent="."]
-transform = Transform3D(-0.658021, 0, 0.752998, 0, 1, 0, -0.752998, 0, -0.658021, 0, 0, 0)
+transform = Transform3D(0.422131, 0, -0.906533, 0, 1, 0, 0.906533, 0, 0.422131, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC13"]
 material_override = SubResource("Material_82h0c")
@@ -214,7 +214,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC14" type="NPC" parent="."]
-transform = Transform3D(0.00121939, 0, 0.999998, 0, 1, 0, -0.999998, 0, 0.00121939, 0, 0, 0)
+transform = Transform3D(-0.299814, 0, 0.953996, 0, 1, 0, -0.953996, 0, -0.299814, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC14"]
 material_override = SubResource("Material_82h0c")
@@ -225,7 +225,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC15" type="NPC" parent="."]
-transform = Transform3D(-0.842017, 0, -0.539451, 0, 1, 0, 0.539451, 0, -0.842017, 0, 0, 0)
+transform = Transform3D(0.778502, 0, 0.627642, 0, 1, 0, -0.627642, 0, 0.778502, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC15"]
 material_override = SubResource("Material_82h0c")
@@ -236,7 +236,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC16" type="NPC" parent="."]
-transform = Transform3D(0.0373127, 0, -0.999304, 0, 1, 0, 0.999304, 0, 0.0373127, 0, 0, 0)
+transform = Transform3D(0.0903821, 0, -0.995908, 0, 1, 0, 0.995908, 0, 0.0903821, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC16"]
 material_override = SubResource("Material_82h0c")
@@ -247,7 +247,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC17" type="NPC" parent="."]
-transform = Transform3D(-0.624132, 0, 0.78132, 0, 1, 0, -0.78132, 0, -0.624132, 0, 0, 0)
+transform = Transform3D(0.989087, 0, 0.147338, 0, 1, 0, -0.147338, 0, 0.989087, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC17"]
 material_override = SubResource("Material_82h0c")
@@ -258,7 +258,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC18" type="NPC" parent="."]
-transform = Transform3D(-0.990202, 0, -0.139642, 0, 1, 0, 0.139642, 0, -0.990202, 0, 0, 0)
+transform = Transform3D(0.720731, 0, 0.693215, 0, 1, 0, -0.693215, 0, 0.720731, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC18"]
 material_override = SubResource("Material_82h0c")
@@ -269,7 +269,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC19" type="NPC" parent="."]
-transform = Transform3D(0.865317, 0, -0.501224, 0, 1, 0, 0.501224, 0, 0.865317, 0, 0, 0)
+transform = Transform3D(-0.997854, 0, 0.0654741, 0, 1, 0, -0.0654741, 0, -0.997854, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC19"]
 material_override = SubResource("Material_82h0c")
@@ -280,7 +280,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC20" type="NPC" parent="."]
-transform = Transform3D(-0.948984, 0, -0.315328, 0, 1, 0, 0.315328, 0, -0.948984, 0, 0, 0)
+transform = Transform3D(0.895717, 0, -0.444627, 0, 1, 0, 0.444627, 0, 0.895717, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC20"]
 material_override = SubResource("Material_82h0c")
@@ -291,7 +291,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC21" type="NPC" parent="."]
-transform = Transform3D(0.282286, 0, -0.959331, 0, 1, 0, 0.959331, 0, 0.282286, 0, 0, 0)
+transform = Transform3D(0.617164, 0, -0.786835, 0, 1, 0, 0.786835, 0, 0.617164, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC21"]
 material_override = SubResource("Material_82h0c")
@@ -302,7 +302,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC22" type="NPC" parent="."]
-transform = Transform3D(0.901464, 0, -0.432855, 0, 1, 0, 0.432855, 0, 0.901464, 0, 0, 0)
+transform = Transform3D(-0.82941, 0, 0.558642, 0, 1, 0, -0.558642, 0, -0.82941, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC22"]
 material_override = SubResource("Material_82h0c")
@@ -313,7 +313,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC23" type="NPC" parent="."]
-transform = Transform3D(-0.0501579, 0, 0.998741, 0, 1, 0, -0.998741, 0, -0.0501579, 0, 0, 0)
+transform = Transform3D(0.821528, 0, 0.570168, 0, 1, 0, -0.570168, 0, 0.821528, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC23"]
 material_override = SubResource("Material_82h0c")
@@ -324,7 +324,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC24" type="NPC" parent="."]
-transform = Transform3D(0.995446, 0, -0.0953193, 0, 1, 0, 0.0953193, 0, 0.995446, 0, 0, 0)
+transform = Transform3D(0.500378, 0, 0.865806, 0, 1, 0, -0.865806, 0, 0.500378, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC24"]
 material_override = SubResource("Material_82h0c")
@@ -335,7 +335,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC25" type="NPC" parent="."]
-transform = Transform3D(0.352619, 0, 0.935768, 0, 1, 0, -0.935768, 0, 0.352619, 0, 0, 0)
+transform = Transform3D(-0.700202, 0, 0.713946, 0, 1, 0, -0.713946, 0, -0.700202, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC25"]
 material_override = SubResource("Material_82h0c")
@@ -346,7 +346,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC26" type="NPC" parent="."]
-transform = Transform3D(0.472735, 0, -0.881203, 0, 1, 0, 0.881203, 0, 0.472735, 0, 0, 0)
+transform = Transform3D(-0.489051, 0, 0.872254, 0, 1, 0, -0.872254, 0, -0.489051, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC26"]
 material_override = SubResource("Material_82h0c")
@@ -357,7 +357,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC27" type="NPC" parent="."]
-transform = Transform3D(0.29183, 0, 0.956471, 0, 1, 0, -0.956471, 0, 0.29183, 0, 0, 0)
+transform = Transform3D(-0.961002, 0, 0.276543, 0, 1, 0, -0.276543, 0, -0.961002, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC27"]
 material_override = SubResource("Material_82h0c")
@@ -368,7 +368,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC28" type="NPC" parent="."]
-transform = Transform3D(0.182209, 0, 0.983259, 0, 1, 0, -0.983259, 0, 0.182209, 0, 0, 0)
+transform = Transform3D(0.484088, 0, 0.875019, 0, 1, 0, -0.875019, 0, 0.484088, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC28"]
 material_override = SubResource("Material_82h0c")
@@ -379,7 +379,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC29" type="NPC" parent="."]
-transform = Transform3D(-0.924383, 0, -0.381467, 0, 1, 0, 0.381467, 0, -0.924383, 0, 0, 0)
+transform = Transform3D(0.0464686, 0, -0.99892, 0, 1, 0, 0.99892, 0, 0.0464686, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC29"]
 material_override = SubResource("Material_82h0c")
@@ -390,7 +390,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC30" type="NPC" parent="."]
-transform = Transform3D(0.943395, 0, 0.331672, 0, 1, 0, -0.331672, 0, 0.943395, 0, 0, 0)
+transform = Transform3D(0.74121, 0, -0.671273, 0, 1, 0, 0.671273, 0, 0.74121, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC30"]
 material_override = SubResource("Material_82h0c")
@@ -401,7 +401,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC31" type="NPC" parent="."]
-transform = Transform3D(-0.229085, 0, 0.973406, 0, 1, 0, -0.973406, 0, -0.229085, 0, 0, 0)
+transform = Transform3D(-0.296772, 0, 0.954948, 0, 1, 0, -0.954948, 0, -0.296772, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC31"]
 material_override = SubResource("Material_82h0c")
@@ -412,7 +412,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC32" type="NPC" parent="."]
-transform = Transform3D(-0.012168, 0, -0.999924, 0, 1, 0, 0.999924, 0, -0.012168, 0, 0, 0)
+transform = Transform3D(0.851234, 0, 0.524783, 0, 1, 0, -0.524783, 0, 0.851234, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC32"]
 material_override = SubResource("Material_82h0c")
@@ -423,7 +423,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC33" type="NPC" parent="."]
-transform = Transform3D(-0.0288708, 0, 0.999584, 0, 1, 0, -0.999584, 0, -0.0288708, 0, 0, 0)
+transform = Transform3D(0.652987, 0, -0.75737, 0, 1, 0, 0.75737, 0, 0.652987, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC33"]
 material_override = SubResource("Material_82h0c")
@@ -434,7 +434,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC34" type="NPC" parent="."]
-transform = Transform3D(0.744317, 0, -0.667828, 0, 1, 0, 0.667828, 0, 0.744317, 0, 0, 0)
+transform = Transform3D(0.964109, 0, 0.26551, 0, 1, 0, -0.26551, 0, 0.964109, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC34"]
 material_override = SubResource("Material_82h0c")
@@ -445,7 +445,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC35" type="NPC" parent="."]
-transform = Transform3D(-0.683649, 0, 0.729812, 0, 1, 0, -0.729812, 0, -0.683649, 0, 0, 0)
+transform = Transform3D(0.328634, 0, -0.944458, 0, 1, 0, 0.944458, 0, 0.328634, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC35"]
 material_override = SubResource("Material_82h0c")
@@ -456,7 +456,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC36" type="NPC" parent="."]
-transform = Transform3D(-0.731054, 0, -0.68232, 0, 1, 0, 0.68232, 0, -0.731054, 0, 0, 0)
+transform = Transform3D(-0.957536, 0, -0.288316, 0, 1, 0, 0.288316, 0, -0.957536, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC36"]
 material_override = SubResource("Material_82h0c")
@@ -467,7 +467,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC37" type="NPC" parent="."]
-transform = Transform3D(0.126273, 0, -0.991995, 0, 1, 0, 0.991995, 0, 0.126273, 0, 0, 0)
+transform = Transform3D(0.971666, 0, 0.236357, 0, 1, 0, -0.236357, 0, 0.971666, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC37"]
 material_override = SubResource("Material_82h0c")
@@ -478,7 +478,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC38" type="NPC" parent="."]
-transform = Transform3D(0.304363, 0, 0.952555, 0, 1, 0, -0.952555, 0, 0.304363, 0, 0, 0)
+transform = Transform3D(-0.202162, 0, 0.979351, 0, 1, 0, -0.979351, 0, -0.202162, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC38"]
 material_override = SubResource("Material_82h0c")
@@ -489,7 +489,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC39" type="NPC" parent="."]
-transform = Transform3D(-0.874467, 0, -0.485086, 0, 1, 0, 0.485086, 0, -0.874467, 0, 0, 0)
+transform = Transform3D(-0.395794, 0, 0.91834, 0, 1, 0, -0.91834, 0, -0.395794, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC39"]
 material_override = SubResource("Material_82h0c")
@@ -500,7 +500,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC40" type="NPC" parent="."]
-transform = Transform3D(-0.37356, 0, -0.927607, 0, 1, 0, 0.927607, 0, -0.37356, 0, 0, 0)
+transform = Transform3D(-0.0634519, 0, -0.997986, 0, 1, 0, 0.997986, 0, -0.0634519, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC40"]
 material_override = SubResource("Material_82h0c")
@@ -511,7 +511,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC41" type="NPC" parent="."]
-transform = Transform3D(0.209872, 0, -0.977728, 0, 1, 0, 0.977728, 0, 0.209872, 0, 0, 0)
+transform = Transform3D(0.206944, 0, -0.978352, 0, 1, 0, 0.978352, 0, 0.206944, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC41"]
 material_override = SubResource("Material_82h0c")
@@ -522,7 +522,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC42" type="NPC" parent="."]
-transform = Transform3D(-0.88098, 0, -0.473152, 0, 1, 0, 0.473152, 0, -0.88098, 0, 0, 0)
+transform = Transform3D(0.451967, 0, 0.892034, 0, 1, 0, -0.892034, 0, 0.451967, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC42"]
 material_override = SubResource("Material_82h0c")
@@ -533,7 +533,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC43" type="NPC" parent="."]
-transform = Transform3D(-0.894252, 0, 0.447566, 0, 1, 0, -0.447566, 0, -0.894252, 0, 0, 0)
+transform = Transform3D(-0.902444, 0, 0.43081, 0, 1, 0, -0.43081, 0, -0.902444, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC43"]
 material_override = SubResource("Material_82h0c")
@@ -544,7 +544,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC44" type="NPC" parent="."]
-transform = Transform3D(-0.319046, 0, -0.947738, 0, 1, 0, 0.947738, 0, -0.319046, 0, 0, 0)
+transform = Transform3D(-0.999998, 0, -0.000941068, 0, 1, 0, 0.000941068, 0, -0.999998, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC44"]
 material_override = SubResource("Material_82h0c")
@@ -555,7 +555,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC45" type="NPC" parent="."]
-transform = Transform3D(0.706612, 0, 0.707601, 0, 1, 0, -0.707601, 0, 0.706612, 0, 0, 0)
+transform = Transform3D(-0.0170986, 0, -0.999854, 0, 1, 0, 0.999854, 0, -0.0170986, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC45"]
 material_override = SubResource("Material_82h0c")
@@ -566,7 +566,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC46" type="NPC" parent="."]
-transform = Transform3D(-0.269247, 0, 0.96307, 0, 1, 0, -0.96307, 0, -0.269247, 0, 0, 0)
+transform = Transform3D(-0.737841, 0, 0.674973, 0, 1, 0, -0.674973, 0, -0.737841, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC46"]
 material_override = SubResource("Material_82h0c")
@@ -577,7 +577,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC47" type="NPC" parent="."]
-transform = Transform3D(-0.673598, 0, -0.7391, 0, 1, 0, 0.7391, 0, -0.673598, 0, 0, 0)
+transform = Transform3D(-0.949599, 0, -0.313471, 0, 1, 0, 0.313471, 0, -0.949599, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC47"]
 material_override = SubResource("Material_82h0c")
@@ -588,7 +588,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC48" type="NPC" parent="."]
-transform = Transform3D(0.767151, 0, -0.641466, 0, 1, 0, 0.641466, 0, 0.767151, 0, 0, 0)
+transform = Transform3D(-0.41532, 0, -0.909675, 0, 1, 0, 0.909675, 0, -0.41532, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC48"]
 material_override = SubResource("Material_82h0c")
@@ -599,7 +599,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC49" type="NPC" parent="."]
-transform = Transform3D(-0.910207, 0, 0.41415, 0, 1, 0, -0.41415, 0, -0.910207, 0, 0, 0)
+transform = Transform3D(-0.946035, 0, -0.324059, 0, 1, 0, 0.324059, 0, -0.946035, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC49"]
 material_override = SubResource("Material_82h0c")
@@ -610,7 +610,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC50" type="NPC" parent="."]
-transform = Transform3D(-0.409525, 0, -0.912297, 0, 1, 0, 0.912297, 0, -0.409525, 0, 0, 0)
+transform = Transform3D(-0.942999, 0, -0.33279, 0, 1, 0, 0.33279, 0, -0.942999, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC50"]
 material_override = SubResource("Material_82h0c")
@@ -621,7 +621,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC51" type="NPC" parent="."]
-transform = Transform3D(0.975645, 0, 0.219351, 0, 1, 0, -0.219351, 0, 0.975645, 0, 0, 0)
+transform = Transform3D(0.977202, 0, -0.212309, 0, 1, 0, 0.212309, 0, 0.977202, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC51"]
 material_override = SubResource("Material_82h0c")
@@ -632,7 +632,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC52" type="NPC" parent="."]
-transform = Transform3D(0.450978, 0, -0.892535, 0, 1, 0, 0.892535, 0, 0.450978, 0, 0, 0)
+transform = Transform3D(0.42163, 0, 0.906768, 0, 1, 0, -0.906768, 0, 0.42163, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC52"]
 material_override = SubResource("Material_82h0c")
@@ -643,7 +643,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC53" type="NPC" parent="."]
-transform = Transform3D(-0.315912, 0, -0.948788, 0, 1, 0, 0.948788, 0, -0.315912, 0, 0, 0)
+transform = Transform3D(-0.0799234, 0, 0.996801, 0, 1, 0, -0.996801, 0, -0.0799234, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC53"]
 material_override = SubResource("Material_82h0c")
@@ -654,7 +654,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC54" type="NPC" parent="."]
-transform = Transform3D(-0.995322, 0, -0.0966254, 0, 1, 0, 0.0966254, 0, -0.995322, 0, 0, 0)
+transform = Transform3D(-0.409633, 0, 0.912252, 0, 1, 0, -0.912252, 0, -0.409633, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC54"]
 material_override = SubResource("Material_82h0c")
@@ -665,7 +665,7 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.08, 0.52)
 mesh = SubResource("SphereMesh_drbn1")
 
 [node name="NPC55" type="NPC" parent="."]
-transform = Transform3D(-0.704762, 0, -0.709442, 0, 1, 0, 0.709442, 0, -0.704762, 0, 0, 0)
+transform = Transform3D(0.790891, 0, 0.611955, 0, 1, 0, -0.611955, 0, 0.790891, 0, 0, 0)
 
 [node name="_MeshInstance3D_18016" type="MeshInstance3D" parent="NPC55"]
 material_override = SubResource("Material_82h0c")

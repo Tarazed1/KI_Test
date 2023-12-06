@@ -16,8 +16,8 @@ class Flocking : public SteeringBehaviour {
 private:
  	const float cohesionWeight = 1.0f;
     const float separationWeight = 1.0f;
-    const float velocityMatchingWeight = 0.5f;
-    const float wanderWeight = 1.0f;
+    const float velocityMatchingWeight = 1.0f;
+    const float wanderWeight = 0.3f;
 
     KnowledgeKinematicGroup* buddies;
 
