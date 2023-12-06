@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgm4ah3j8jxke"]
+[gd_scene load_steps=4 format=3 uid="uid://dgm4ah3j8jxke"]
 
-[ext_resource type="Script" path="res://NPCController.gd" id="1_bs0d3"]
+[ext_resource type="PackedScene" uid="uid://tcigqfcfcqv6" path="res://buddy_controller.tscn" id="1_rg7sd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4dwmr"]
+albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v2myc"]
 
@@ -10,18 +13,22 @@
 
 [node name="CSGBox3D" type="CSGBox3D" parent="enviroment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-size = Vector3(50, 1, 50)
+material_override = SubResource("StandardMaterial3D_4dwmr")
+size = Vector3(200, 1, 200)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="enviroment/CSGBox3D"]
 material_override = SubResource("StandardMaterial3D_v2myc")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.905991, 0.423298, 0, -0.423298, 0.905991, 0, 13.5002, 36.4635)
+transform = Transform3D(1, 0, 0, 0, 0.905991, 0.423298, 0, -0.423298, 0.905991, 0, 18.9179, 51.1436)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.724042, -0.334004, 0.603494, 0.239855, 0.942254, 0.233725, -0.646709, -0.0244759, 0.762344, 0, 5.69105, 0.953823)
 light_energy = 3.159
 light_indirect_energy = 1.609
 
-[node name="Node3D" type="Node3D" parent="."]
-script = ExtResource("1_bs0d3")
+[node name="NPC" type="NPC" parent="."]
+transform = Transform3D(0.776482, 0, 0.630139, 0, 1, 0, -0.630139, 0, 0.776482, 0, -1, 0)
+visible = false
+
+[node name="BuddyController" parent="." instance=ExtResource("1_rg7sd")]

@@ -1,6 +1,6 @@
 #include "flocking.h"
 #include <godot_cpp/variant/utility_functions.hpp>
-#include <string>
+#include "knowledgeposition.h"
 #include <sstream>
 
 Flocking::Flocking() : SteeringBehaviour()
@@ -25,6 +25,7 @@ Flocking::Flocking(Kinematics* inKin, KnowledgeKinematicGroup* group) : Steering
 	cohesion = nullptr;
 	separation = nullptr;
 	velocityMatching = nullptr;
+	wander = new Wander(inKin);
 
 	if (buddies) {
 		cohesion = new Cohesion(inKin, buddies);
@@ -55,6 +56,7 @@ SteeringForce Flocking::get_force()
 		return aSteeringForce;
 	}
 
+	if (wanderWeight != 0) aSteeringForce += wander->get_force() * wanderWeight;
 	if(cohesionWeight != 0) aSteeringForce += cohesion->get_force() * cohesionWeight;
 	if(separationWeight != 0) aSteeringForce += separation->get_force() * separationWeight;
 	if(velocityMatchingWeight != 0) aSteeringForce += velocityMatching->get_force() * velocityMatchingWeight;

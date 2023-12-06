@@ -76,7 +76,7 @@ void SteeringBehaviour::update(double time, Vector3 pos)
     if (kinematics->velocity.length() > kinematics->maxMovementVelocity) {
         kinematics->velocity = kinematics->velocity.normalized() * kinematics->maxMovementVelocity;
     }
-    kinematics->position += kinematics->velocity * time * 10.0f;
+    kinematics->position += kinematics->velocity * time;
 }
 
 void SteeringBehaviour::set_facing_mode()

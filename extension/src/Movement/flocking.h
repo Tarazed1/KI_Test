@@ -6,6 +6,8 @@
 #include "../Utility/knowledgekinematicgroup.h"
 #include "cohesion.h"
 #include "separation.h"
+#include "wander.h"
+#include "flee.h"
 #include "Movement/velocitymatching.h"
 
 using namespace godot;
@@ -14,13 +16,15 @@ class Flocking : public SteeringBehaviour {
 private:
  	const float cohesionWeight = 1.0f;
     const float separationWeight = 1.0f;
-    const float velocityMatchingWeight = 1.0f;
+    const float velocityMatchingWeight = 0.5f;
+    const float wanderWeight = 1.0f;
 
     KnowledgeKinematicGroup* buddies;
 
     Cohesion* cohesion;
     Separation* separation;
     VelocityMatching* velocityMatching;
+    Wander* wander;
 protected:
 public:
     Flocking();

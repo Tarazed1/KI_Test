@@ -6,7 +6,7 @@ var testNPC;
 func _ready():
 	testNPC = NPC.new();
 	add_child(testNPC);
-	testNPC.change_behaviour(4);
+	testNPC.change_behaviour(3);
 	testNPC.set_color(Color.GREEN); 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

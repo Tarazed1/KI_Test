@@ -6,6 +6,7 @@
 #include <godot_cpp/variant/utility_functions.hpp>
 #include "Utility/knowledgekinematicgroup.h"
 #include <godot_cpp/classes/engine.hpp>
+#include <godot_cpp/classes/random_number_generator.hpp>
 
 NPC::NPC() {
 	position = Vector3(1.0, 0.0, 1.0);
@@ -30,7 +31,8 @@ NPC::NPC() {
 	seekBehaviour = new Seek(this->kinematics);
 	arriveBehaviour = new Arrive(this->kinematics);
 	pathBehaviour = new Pathgrapplinghook(this->kinematics);
-	steeringBehaviour = fleeBehaviour;
+	
+	steeringBehaviour = pathBehaviour;
 }
 
 NPC::~NPC() {
@@ -40,6 +42,10 @@ NPC::~NPC() {
 void NPC::_ready() {
 	this->add_child(model);
 	this->model->add_child(nose);
+	RandomNumberGenerator rng;
+	float angle = rng.randf_range(-180.0, 180.0);
+	this->rotate(Vector3(0, 1, 0), angle);
+	this->kinematics->orientation = angle;
 } 
 
 
@@ -47,7 +53,10 @@ void NPC::_process(double delta) {
 	if (Engine::get_singleton()->is_editor_hint()) return;
 	if (changeingBehaviour) change_behaviour_intern();
 	steeringBehaviour->update(delta, position);
-	if(this->kinematics->velocity != Vector3(0,0,0)) look_at(this->kinematics->velocity);
+	if (this->kinematics->velocity != Vector3(0, 0, 0)) {
+		look_at(this->kinematics->velocity);
+		//this->kinematics->orientation = SteeringBehaviour::directionvector_to_angle(this->kinematics->orientation, this->get_global_rotation(), false);
+	}
 	this->set_position(steeringBehaviour->get_kinematics()->position);
 }
 

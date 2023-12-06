@@ -37,7 +37,7 @@ void BuddyController::init_group()
 		//if child is a npc push it into the nps-list, set its position random and initialize the flocking behaviour
 		if (n) {
 			npcs.push_back(n);
-			n->set_position_intern(Vector3(rng.randf_range(-5, 5), 0, rng.randf_range(-5, 5)));
+			n->set_position_intern(Vector3(rng.randf_range(-20, 20), 0, rng.randf_range(-30, 30)));
 			group->subscribe(n->get_kinematics());
 			n->init_flocking(group);
 			n->change_behaviour(3);

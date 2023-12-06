@@ -2,6 +2,7 @@
 #define WANDER_CLASS
 
 #include <godot_cpp/variant/vector3.hpp>
+#include <godot_cpp/classes/random_number_generator.hpp>
 #include "steeringbehaviour.h"
 #include "../random.h"
 #include "../Utility/macros.h"
@@ -16,12 +17,13 @@ private:
 	float radius = 5.0f;
 	float maxAngleChange = DEGREES_TO_RADIANS(10);
 	Vector3 positionOnCircleBorder;
-	Random randomGenerator;
+	RandomNumberGenerator randomGenerator;
 
 protected:
 
 public:
 	Wander();
+	Wander(Kinematics* inKin);
 	~Wander();
 
 	SteeringForce get_force() override;

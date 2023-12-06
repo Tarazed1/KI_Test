@@ -7,6 +7,7 @@
 #include "Movement/flee.h"
 #include "Movement/arrive.h"
 #include "Movement/seek.h"
+#include "Movement/wander.h"
 #include "Utility/knowledgekinematicgroup.h"
 #include "Movement/flocking.h"
 #include "Movement/pathgrapplinghook.h"

@@ -24,9 +24,9 @@ protected:
 
 	virtual bool in_fov(Vector3 &viewDir, Vector3 &targetDir, float fov);
 	virtual Vector3 limit();
-	virtual float directionvector_to_angle(float currentAngle, Vector3 inVec, bool degrees);
 	virtual Vector3 angle_to_directionvector(float inAngle);
 public:
+	static float directionvector_to_angle(float currentAngle, Vector3 inVec, bool degrees);
 	SteeringBehaviour();
 	SteeringBehaviour(Kinematics* inKin);
 	~SteeringBehaviour();
